@@ -1,0 +1,1 @@
+The WorkSample_CustomerStatus module serves to handle the customer attribute "Customer Status" both in the admin panel and the storefront.

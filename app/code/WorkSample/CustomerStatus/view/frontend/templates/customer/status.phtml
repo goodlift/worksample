@@ -1,0 +1,38 @@
+<?php /** @var WorkSample\CustomerStatus\Block\CustomerStatus $block */ ?>
+<div class="block block-status-info">
+    <div class="block-title">
+        <strong><?= $block->escapeHtml(__('Customer Status')) ?></strong>
+    </div>
+    <div class="block-content">
+        <form class="form customer-status"
+              action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+              id="customer-status-form"
+              method="post"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset">
+                <?= $block->getBlockHtml('formkey') ?>
+                <div class="field name">
+                    <label class="label" for="customer_status"><span><?= $block->escapeHtml(__('Status')) ?></span></label>
+                    <div class="control">
+                        <input name="customer_status"
+                               id="customer_status"
+                               title="<?= $block->escapeHtmlAttr(__('Status')) ?>"
+                               value="<?= $block->escapeHtmlAttr($block->getCustomerStatus()) ?>"
+                               class="input-text maximum-length-255"
+                               type="text"
+                               data-validate="{'validate-length':true}"
+                        />
+                    </div>
+                </div>
+            </fieldset>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <input type="hidden" name="hideit" id="hideit" value="" />
+                    <button type="submit" title="<?= $block->escapeHtmlAttr(__('Save')) ?>" class="action submit primary">
+                        <span><?= $block->escapeHtml(__('Save')) ?></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

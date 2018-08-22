@@ -1,0 +1,6 @@
+<?php /** @var WorkSample\CustomerStatus\Block\CustomerStatus $block */ ?>
+<?php if ($block->getCustomerStatus()): ?>
+    <li class="customer-status" data-label="<?= $block->escapeHtmlAttr(__('Customer Status')) ?>">
+        <span><?= $block->escapeHtml($block->getCustomerStatus()) ?></span>
+    </li>
+<?php endif ?>
